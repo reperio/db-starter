@@ -1,0 +1,26 @@
+{
+  "name": "db-starter",
+  "version": "1.0.0",
+  "description": "Contains base classes for a UnitOfWork and Model",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reperio/db-starter.git"
+  },
+  "author": "Seven Hills Technology",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reperio/db-starter/issues"
+  },
+  "homepage": "https://github.com/reperio/db-starter#readme",
+  "dependencies": {
+    "knex": "^0.14.3",
+    "objection": "^0.9.4"
+  },
+  "devDependencies": {
+    "@types/knex": "^0.14.5"
+  }
+}
