@@ -1,2 +1,2 @@
 export {BaseModel} from './baseModel';
-export {UnitOfWork} from './unitOfWork';
+export {BaseUnitOfWork} from './baseUnitOfWork';

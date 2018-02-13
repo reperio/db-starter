@@ -4,6 +4,7 @@
   "description": "Contains base classes for a UnitOfWork and Model",
   "main": "index.ts",
   "scripts": {
+    "build": "tsc --allowJs false --declaration",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/reperio/db-starter#readme",
   "dependencies": {
+    "@types/uuid": "^3.4.3",
+    "@types/winston": "^2.3.8",
     "knex": "^0.14.3",
     "objection": "^0.9.4"
   },
