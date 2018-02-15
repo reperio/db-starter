@@ -1,13 +1,12 @@
 import * as Knex from 'knex';
-import {Model} from 'objection';
 import {Winston} from 'winston';
 
 export class BaseUnitOfWork {
     knex: Knex;
-    transaction: any;
+    transaction: Knex.Transaction;
 
-    constructor(logger: Winston, connection: any) {
-        this.knex = Knex(connection);
+    constructor(logger: Winston, connection: Knex) {
+        this.knex = connection;
         this.transaction = null;
 
         this.knex.on('query', (query: any) => logger.debug(query.toNative()));

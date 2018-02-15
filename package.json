@@ -2,7 +2,8 @@
   "name": "db-starter",
   "version": "1.0.0",
   "description": "Contains base classes for a UnitOfWork and Model",
-  "main": "index.ts",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc --allowJs false --declaration",
     "test": "echo \"Error: no test specified\" && exit 1"
