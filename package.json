@@ -1,5 +1,5 @@
 {
-  "name": "db-starter",
+  "name": "reperio-db-starter",
   "version": "1.0.0",
   "description": "Contains base classes for a UnitOfWork and Model",
   "main": "./lib/index.js",
@@ -25,6 +25,7 @@
     "objection": "^0.9.4"
   },
   "devDependencies": {
-    "@types/knex": "^0.14.5"
+    "@types/knex": "^0.14.5",
+    "typescript": "^2.7.2"
   }
 }
