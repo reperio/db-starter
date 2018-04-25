@@ -1,11 +1,11 @@
 import * as Knex from 'knex';
-import {Winston} from 'winston';
+import {Winston, LoggerInstance} from 'winston';
 
 export class BaseUnitOfWork {
     knex: Knex;
     transaction: Knex.Transaction;
 
-    constructor(logger: Winston, connection: Knex) {
+    constructor(logger: LoggerInstance, connection: Knex) {
         this.knex = connection;
         this.transaction = null;
 
