@@ -21,10 +21,10 @@
   "dependencies": {
     "@types/uuid": "^3.4.3",
     "@types/winston": "^2.3.8",
-    "knex": "^0.14.3",
+    "knex": "^0.14.6",
     "objection": "^0.9.4"
   },
   "devDependencies": {
-    "@types/knex": "^0.14.5"
+    "@types/knex": "^0.14.12"
   }
 }
