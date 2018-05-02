@@ -4,10 +4,12 @@ import {Winston, LoggerInstance} from 'winston';
 export class BaseUnitOfWork {
     knex: Knex;
     transaction: Knex.Transaction;
+    logger: LoggerInstance;
 
     constructor(logger: LoggerInstance, connection: Knex) {
         this.knex = connection;
         this.transaction = null;
+        this.logger = logger;
 
         this.knex.on('query', (query: any) => logger.debug(query.toNative()));
     }

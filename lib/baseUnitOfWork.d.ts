@@ -5,6 +5,7 @@ import { LoggerInstance } from 'winston';
 export declare class BaseUnitOfWork {
     knex: Knex;
     transaction: Knex.Transaction;
+    logger: LoggerInstance;
     constructor(logger: LoggerInstance, connection: Knex);
     beginTransaction(): Promise<void>;
     commitTransaction(): Promise<void>;
