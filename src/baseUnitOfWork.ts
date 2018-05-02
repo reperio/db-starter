@@ -1,5 +1,5 @@
 import * as Knex from 'knex';
-import {Winston, LoggerInstance} from 'winston';
+import {LoggerInstance} from 'winston';
 
 export class BaseUnitOfWork {
     knex: Knex;

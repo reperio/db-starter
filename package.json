@@ -25,6 +25,7 @@
     "objection": "^0.9.4"
   },
   "devDependencies": {
-    "@types/knex": "^0.14.12"
+    "@types/knex": "^0.14.12",
+    "typescript": "^2.8.3"
   }
 }
