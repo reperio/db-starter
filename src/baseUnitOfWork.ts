@@ -11,7 +11,7 @@ export class BaseUnitOfWork {
         this.transaction = null;
         this.logger = logger;
 
-        this.knex.on('query', (query: any) => logger.debug(query.toNative()));
+        this.knex.on('query', (query: any) => logger.debug(query.sql));
     }
 
     async beginTransaction() {
