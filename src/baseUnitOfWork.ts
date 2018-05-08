@@ -23,6 +23,7 @@ export class BaseUnitOfWork {
         await new Promise(resolve => {
             this.knex.transaction(trx => {
                 this.transaction = trx;
+                resolve();
             });
         });
     }
