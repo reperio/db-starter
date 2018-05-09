@@ -1,17 +1,17 @@
 import * as Knex from 'knex';
-import {Winston} from 'winston';
+import {LoggerInstance} from 'winston';
 
 export class BaseUnitOfWork {
     knex: Knex;
     transaction: Knex.Transaction;
-    logger: Winston;
+    logger: LoggerInstance;
 
-    constructor(logger: Winston, connection: Knex) {
+    constructor(logger: LoggerInstance, connection: Knex) {
         this.knex = connection;
         this.transaction = null;
         this.logger = logger;
 
-        this.knex.on('query', (query: any) => logger.debug(query.toNative()));
+        this.knex.on('query', (query: any) => logger.debug(query.sql));
     }
 
     async beginTransaction() {
@@ -23,6 +23,7 @@ export class BaseUnitOfWork {
         await new Promise(resolve => {
             this.knex.transaction(trx => {
                 this.transaction = trx;
+                resolve();
             });
         });
     }
